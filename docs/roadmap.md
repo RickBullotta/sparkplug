@@ -39,6 +39,17 @@
 * Add compression support for payloads
 * Multiple Host ID support for Edge Nodes - or secondary hosts?
 * Expand Sparkplug Aware MQTT Server definition to include automatic BIRTH delivery
+* Expand Sparkplug Aware MQTT Server definition to include automatic expansion of DATA and BIRTH metric content into individual topics
+* Expand Sparkplug Aware MQTT Server definition to a REST API for querying metadata
+* Expand Sparkplug Aware MQTT Server definition to a REST API for querying most recent data and for connectionless publishing of DATA and BIRTH messages
+* Add strong data typing for inputs and output to commands as part of BIRTH or METADATA
+* Implement a reliable request/response mechanism so that commands can return data, error codes, or other result content
+* Consider eliminating group/node/edge IDs altogether and allowing a flexible hiearchy using namespace/message_type/any_hiearchy (note that this would not break existing apps given a new namespace for the next version of SpB)
+* Add new primitive types for location and generic JSON
+* Separate data and metadata in BIRTH messages and leverage the MQTT retain flag to optimize/minimize load on edge nodes and to enable application tooling to discover metadata even if an edge node is offline
+* Clarify which components of a Sparkplug metric are mandatory and which are optional
+
+
 
 ## To Investigate
 * https://github.com/eclipse-sparkplug/sparkplug/issues/174
